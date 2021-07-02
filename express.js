@@ -1,9 +1,11 @@
 var express = require('express')
+const { ourSum } = require('./ourmodule')
 var app = express()
 
 //app.get('/altpath);
 app.get('/atoss',(req,res) => {
-    res.send('/atoss aaa')
+    //res.send('/atoss aaa')
+    res.send(ourSum.toString());
 })
 
 app.listen(3000,() => {
